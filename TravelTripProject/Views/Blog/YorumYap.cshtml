@@ -1,0 +1,11 @@
+﻿@{ string str = TempData.Peek("deger").ToString(); }
+<div class="content-form">
+    <h3>Yorum Yap</h3>
+    <form method="post">
+        <input type="hidden" placeholder="ID" name="Blogid" value="@str" required />
+        <input type="text" placeholder="Kullanıcı Adı" name="KullaniciAdi" required />
+        <input type="text" placeholder="Email" name="Mail" required />
+        <textarea placeholder="Yorum" name="Yorum"></textarea>
+        <input type="submit" value="GÖNDER" />
+    </form>
+</div>
