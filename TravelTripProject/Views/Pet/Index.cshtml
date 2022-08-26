@@ -1,0 +1,36 @@
+﻿@using TravelTripProject.Models.Classes
+@model List<Pet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<body>
+    <section class="grids-1 py-5">
+        <div class="grids py-lg-5 py-md-4">
+            <div class="container">
+                <h3 class="hny-title mb-5">İlanlarımız</h3>
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-4 col-6">
+                            <div class="column">
+                                <a href="/Pet/PetDetails/@item.ID"><img src="@item.Image" alt="" class="img-fluid"></a>
+                                <div class="info">
+                                    <h4><a href="/Pet/PetDetails/@item.ID">@item.Tur&@item.Cinsiyet</a></h4>
+                                    <p>@item.Konum</p>
+                                    <div class="dst-btm">
+                                        <h6 class="">Yayınlanma Tarihi</h6>
+                                        <span>@item.Tarih.ToString("dd.MM.yyyy")</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+

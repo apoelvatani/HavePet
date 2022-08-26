@@ -41,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <img src=@item.BlogImage alt="" style="margin-bottom:20px"/>
                             <a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a>
                             <p>
-                                @item.Aciklama
+                                @item.Aciklama.Substring(0, 200)...
                             </p>
                         </div>
                         <br /> <br />
@@ -49,7 +49,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="col-md-4 side-content">
                     <div class="recent">
-                        <h3>RECENT POSTS</h3>
+                        <h3>SON BLOGLAR</h3>
                         @foreach (var item in Model.Deger3)
                         {
                             <ul>
@@ -58,12 +58,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         }
                     </div>
                     <div class="comments">
-                        <h3>RECENT COMMENTS</h3>
-                        <ul>
-                            <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
-                            <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
-                            <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
-                        </ul>
+                        <h3>SON YORUMLAR</h3>
+                        @foreach (var item in Model.Deger4)
+                        {
+                            <ul>
+                                <li><a href="/Blog/BlogDetay/@item.Blogid">@item.KullaniciAdi - @item.Blog.Baslik</a></li>
+                            </ul>
+                        }
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -43,5 +43,19 @@ namespace TravelTripProject.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Login");
         }
+
+        [HttpGet]
+        public ActionResult KayitOl()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult KayitOl(Admin admin)
+        {
+            c.Admins.Add(admin);
+            c.SaveChanges();
+            return RedirectToAction("Login");
+        }
     }
 }

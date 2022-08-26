@@ -1,0 +1,110 @@
+﻿@using TravelTripProject.Models.Classes
+@model List<Pet>
+@{
+    ViewBag.Title = "PetDetails";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<section class="sptb">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="@item.Image" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="product-filters-container" style="font-size:13px;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Konum</div>
+                                            <div class="col-6 col-md-9" style="font-weight:700; color:#C90003;">: @item.Konum</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">İlan tarihi</div>
+                                            <div class="col-6 col-md-9" style="font-weight:700;">: @item.Tarih.ToString("dd.MM.yyyy")</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Pet Türü</div>
+                                            <div class="col-6 col-md-9">: @item.Tur</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Pet Cinsi</div>
+                                            <div class="col-6 col-md-9">: @item.Cins</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Yaşı</div>
+                                            <div class="col-6 col-md-9">: @item.Yas</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Cinsiyet</div>
+                                            <div class="col-6 col-md-9">: @item.Cinsiyet</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Boyut</div>
+                                            <div class="col-6 col-md-9">: @item.Width x @item.Height</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Aşıları</div>
+                                            <div class="col-6 col-md-9">: @item.Asilar</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Kimden</div>
+                                            <div class="col-6 col-md-9">: @item.Yayinlayan</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3" style="font-weight:600;">Telefon</div>
+                                            <div class="col-6 col-md-9">: @item.TelefonNumarasi</div>
+                                        </div>
+                                        <hr style="margin: 0.5rem auto 0.5rem;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @{ 
+                            var c = item.Height * 3;
+                            var d = item.Width * 3;
+                        }
+                        <!--Right Side Content-->
+                        <div class="col-xl-3 col-lg-4 col-md-12">
+                            <div class="panel panel-default beyaz iletisim" style="border:1px solid #FFFFFF; background:#FFFFFF;">
+                                <img src="@item.Siluet" alt="" style="width:@c;height:@d;" />
+                                <h6>Temsili Boyut</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/Right Side Content-->
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="btn btn-red" style="font-weight:bold;">
+                                Açıklama
+                            </div>
+                            <div class="card-body">
+                                <p>@item.Aciklama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</section>

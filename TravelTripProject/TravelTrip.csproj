@@ -133,6 +133,8 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\PetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -145,6 +147,7 @@
     <Compile Include="Models\Classes\Context.cs" />
     <Compile Include="Models\Classes\Home.cs" />
     <Compile Include="Models\Classes\Iletisim.cs" />
+    <Compile Include="Models\Classes\Pet.cs" />
     <Compile Include="Models\Classes\Yorumlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,9 +198,30 @@
     <Content Include="web\destinations.html" />
     <Content Include="web\images\about_banner.jpg" />
     <Content Include="web\images\arrows.png" />
+    <Content Include="web\images\banner1.jpg" />
+    <Content Include="web\images\banner2.jpg" />
+    <Content Include="web\images\banner3.jpg" />
+    <Content Include="web\images\banner4.jpg" />
+    <Content Include="web\images\bird.png" />
+    <Content Include="web\images\blog1.png" />
+    <Content Include="web\images\blog10.jpg" />
+    <Content Include="web\images\blog2.jpg" />
+    <Content Include="web\images\blog3.jpg" />
+    <Content Include="web\images\blog4.jpg" />
+    <Content Include="web\images\blog5.jpg" />
+    <Content Include="web\images\blog6.jpg" />
+    <Content Include="web\images\blog7.jpg" />
+    <Content Include="web\images\blog8.jpg" />
+    <Content Include="web\images\blog9.jpg" />
     <Content Include="web\images\but.png" />
+    <Content Include="web\images\cat.png" />
     <Content Include="web\images\contact.png" />
+    <Content Include="web\images\date.png" />
     <Content Include="web\images\dest_banner.jpg" />
+    <Content Include="web\images\Dog.png" />
+    <Content Include="web\images\down.png" />
+    <Content Include="web\images\find.png" />
+    <Content Include="web\images\fish.png" />
     <Content Include="web\images\flight.png" />
     <Content Include="web\images\glass.png" />
     <Content Include="web\images\group.png" />
@@ -207,9 +231,12 @@
     <Content Include="web\images\img2.jpg" />
     <Content Include="web\images\img3.jpg" />
     <Content Include="web\images\img4.jpg" />
+    <Content Include="web\images\japon.jpg" />
     <Content Include="web\images\key.png" />
+    <Content Include="web\images\kurt.jpg" />
     <Content Include="web\images\link1-bg.gif" />
     <Content Include="web\images\logo.png" />
+    <Content Include="web\images\melek.jpeg" />
     <Content Include="web\images\pic.jpg" />
     <Content Include="web\images\pic1.jpg" />
     <Content Include="web\images\pic10.jpg" />
@@ -221,6 +248,10 @@
     <Content Include="web\images\pic7.jpg" />
     <Content Include="web\images\pic8.jpg" />
     <Content Include="web\images\pic9.jpg" />
+    <Content Include="web\images\sahin.jpeg" />
+    <Content Include="web\images\sakiz.jpeg" />
+    <Content Include="web\images\shorthair.jpg" />
+    <Content Include="web\images\sultan.jpeg" />
     <Content Include="web\index.html" />
     <Content Include="web\js\bootstrap.min.js" />
     <Content Include="web\js\jquery.min.js" />
@@ -275,6 +306,10 @@
     <Content Include="weblogin\fonts\Asap-Regular.ttf" />
     <Content Include="weblogin\fonts\Audiowide-Regular.ttf" />
     <Content Include="Views\GirisYap\Login.cshtml" />
+    <Content Include="Views\Pet\Index.cshtml" />
+    <Content Include="Views\Pet\PetDetails.cshtml" />
+    <Content Include="Views\Iletisim\Index.cshtml" />
+    <Content Include="Views\GirisYap\KayitOl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

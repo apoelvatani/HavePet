@@ -14,5 +14,6 @@ namespace TravelTripProject.Models.Classes
         public DbSet<About> Abouts { get; set; }
         public DbSet<Iletisim> Iletisims { get; set; }
         public DbSet<Yorumlar> Yorumlars { get; set; }
+        public DbSet<Pet> Pets { get; set; }
     }
 }

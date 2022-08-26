@@ -8,56 +8,43 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-
-    <section class="w3l-main-slider" id="home">
+    @*<section class="w3l-main-slider" id="home">
         <div class="banner-content">
             <div id="demo-1"
-                 data-zs-src='["/Traversal-Starter/assets/images/banner1.jpg", "/Traversal-Starter/assets/images/banner2.jpg","/Traversal-Starter/assets/images/banner3.jpg", "/Traversal-Starter/assets/images/banner4.jpg"]'
+                 data-zs-src='["~/web/images/banner1.jpg", "~/web/images/banner2.jpg","~/web/images/banner3.jpg", "~/web/images/banner4.jpg"]'
                  data-zs-overlay="dots">
                 <div class="demo-inner-content">
                     <div class="container">
                         <div class="banner-infhny">
-                            <h3>Aradığınız oteli hala bulamadınız mı ?</h3>
-                            <h6 class="mb-3">Kendiniz için en iyi oteli keşfedin.</h6>
+                            <h3>Hayvan Sahiplendirme Platformu</h3>
+                            <h6 class="mb-3">Satın alma, sahiplen!</h6>
                             <div class="flex-wrap search-wthree-field mt-md-5 mt-4">
                                 <form action="#" method="post" class="booking-form">
                                     <div class="row book-form">
                                         <div class="form-input col-md-4 mt-md-0 mt-3">
 
                                             <select name="selectpicker" class="selectpicker">
-                                                <option value="">Tüm Bölgeler</option>
-                                                <option value="asia">Akdeniz</option>
-                                                <option value="south-america">Doğu Anadolu</option>
-                                                <option value="eastern-europe">Ege</option>
-                                                <option value="south-america">Güneydoğu Anadolu</option>
-                                                <option value="africa">İç Anadolu</option>
-                                                <option value="america">Karadeniz</option>
-                                                <option value="europe">Marmara</option>
+                                                <option value="">Tüm Türler</option>
+                                                <option value="asia">Köpek</option>
+                                                <option value="south-america">Kedi</option>
+                                                <option value="eastern-europe">Balık</option>
+                                                <option value="south-america">Kuş</option>
                                             </select>
 
                                         </div>
                                         <div class="form-input col-md-4 mt-md-0 mt-3">
 
                                             <select name="selectpicker" class="selectpicker">
-                                                <option value="">Tüm Bölgeler</option>
-                                                <option value="asia">Akdeniz</option>
-                                                <option value="south-america">Doğu Anadolu</option>
-                                                <option value="eastern-europe">Ege</option>
-                                                <option value="south-america">Güneydoğu Anadolu</option>
-                                                <option value="africa">İç Anadolu</option>
-                                                <option value="america">Karadeniz</option>
-                                                <option value="europe">Marmara</option>
+                                                <option value="">Tüm Cinsiyetler</option>
+                                                <option value="asia">Kız</option>
+                                                <option value="south-america">Erkek</option>
+                                                <option value="eastern-europe">Bilinmiyor</option>
                                             </select>
 
                                         </div>
-                                        @*<div class="form-input col-md-4 mt-md-0 mt-3">
-
-            <input type="date" name="" placeholder="Date" required="">
-        </div>*@
                                         <div class="bottom-btn col-md-4 mt-md-0 mt-3">
                                             <button class="btn btn-style btn-secondary">
-                                                <span class="fa fa-search mr-3"
-                                                      aria-hidden="true"></span> Ara
+                                                <span aria-hidden="true"></span> Ara
                                             </button>
                                         </div>
                                     </div>
@@ -68,9 +55,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>*@
 
-    <div class="header-banner">
+    <!--<div class="header-banner">
         <div class="wrap">
             <div class="banner">
                 <div class="indent">
@@ -118,15 +105,11 @@
 
                         <div class="slider" style="width:480px;height:350px">
                             <ul class="rslides" id="slider1">
-                                @foreach (var item in Model)
-                                {
-                                    <li><img src="@item.BlogImage" alt=""></li>
-                                }
 
-                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
-                                    <li><img src="~/web/images/img3.jpg" alt=""></li>
-                                    <li><img src="~/web/images/img4.jpg" alt=""></li>*@
-                            </ul>
+    @*<li><img src="~/web/images/img2.jpg" alt=""></li>
+        <li><img src="~/web/images/img3.jpg" alt=""></li>
+        <li><img src="~/web/images/img4.jpg" alt=""></li>*@
+    <!--</ul>
                         </div>
                     </div>
                 </div>
@@ -134,24 +117,63 @@
             </div>
             <div class="clear"></div>
         </div>
-    </div>
-    <div class"content">
+    </div>-->
+
         <div class="wrap">
             <div class="wrapper">
-                <div class="con-top">
-                    <h3>Welcome to our Travel Company!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facil</p>
-                </div>
-                @Html.Action("Partial1", "Default")
-                <div class="grids">
-                    <div class="box1">
-                        @Html.Action("Partial2", "Default")
-                        @Html.Action("Partial3", "Default")
-                        <div class="clear"></div>
+
+                <div class"content">
+                    <div class="demo-inner-content bg-warning">
+                        <div class="container p-3 my-3">
+                            <div class="container-fluid">
+                                <h3 class="text-dark">Hayvan Sahiplendirme Platformu</h3>
+                                <h6 class="text-dark mb-3">Satın alma, sahiplen!</h6>
+                                <div class="flex-wrap search-wthree-field mt-md-5 mt-4">
+                                    <form action="#" method="post" class="booking-form">
+                                        <div class="row book-form">
+                                            <div class="form-input col-md-4 mt-md-0 mt-3">
+                                                <select name="selectpicker" class="selectpicker">
+                                                    <option value="">Tüm Türler</option>
+                                                    <option value="asia">Köpek</option>
+                                                    <option value="south-america">Kedi</option>
+                                                    <option value="eastern-europe">Balık</option>
+                                                    <option value="south-america">Kuş</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input col-md-4 mt-md-0 mt-3">
+                                                <select name="selectpicker" class="selectpicker">
+                                                    <option value="">Tüm Cinsiyetler</option>
+                                                    <option value="asia">Kız</option>
+                                                    <option value="south-america">Erkek</option>
+                                                    <option value="eastern-europe">Bilinmiyor</option>
+                                                </select>
+                                            </div>
+                                            <div class="bottom-btn col-md-4 mt-md-0 mt-3">
+                                                <button class="btn btn-style btn-secondary">
+                                                    <span class="fa"
+                                                          aria-hidden="true"></span> Ara
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="con-top">
+                        <h3>HavePet Hayvan Sahiplendirme Sitesine Hoş geldiniz!</h3>
+                        <p>Sitemizde evcil hayvanların türlerine ve cinsiyetlerine göre filtreleyerek inceleyebilir, evcil hayvanlar hakkında yapılan bloglarımıza göz atabilirsiniz. Umarım ilanlarımızda evcil hayvanlar hakkında verilen bilgilerin güvenirliği siz hayvanseverlerimiz için yeterlidir. Sitemizde gezinirken keyifli vakitler geçirmenizi dileriz...</p>
+                    </div>
+                    @Html.Action("Partial1", "Default")
+                    <div class="grids">
+                        <div class="box1">
+                            @Html.Action("Partial2", "Default")
+                            @Html.Action("Partial3", "Default")
+                            <div class="clear"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </body>
 </html>

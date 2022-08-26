@@ -1,29 +1,35 @@
-﻿@using TravelTripProject.Models.Classes
-@model List<Blog>
+﻿@model TravelTripProject.Models.Classes.BlogYorum
 <div class="padding1">
-    <h4>Our Best Blogs</h4>
-    <div class="box-left">
-        @foreach (var item in Model)
+    <h4>Son Yorumlarımız</h4>
+
+    @{ int i = 0; }
+
+    @foreach (var item in Model.Deger4)
+    {
+        if (i % 2 == 0)
         {
-            <div class="bot-img">
-                <img src="@item.BlogImage" alt="" />
+            <div class="box-left">
+                <div class="bot-img">
+                    <img src="@item.Blog.BlogImage" alt="" />
+                </div>
+                <div class="bot-desc">
+                    <a href="/Blog/BlogDetay/@item.Blogid">@item.KullaniciAdi : @item.Yorum.Substring(0, 10)...</a>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="bot-desc">
-                <p>@item.Aciklama.Substring(0,1)...</p>
-            </div>
-            <div class="clear"></div>
         }
-    </div>
-    <div class="box1-left">
-        @foreach (var item in Model)
+        if (i % 2 == 1)
         {
-            <div class="bot-img">
-                <img src="@item.BlogImage" alt="" />
+            <div class="box1-left">
+                <div class="bot-img">
+                    <img src="@item.Blog.BlogImage" alt="" />
+                </div>
+                <div class="bot-desc1">
+                    <a href="/Blog/BlogDetay/@item.Blogid">@item.KullaniciAdi : @item.Yorum.Substring(0, 10)...</a>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="bot-desc1">
-                <p>@item.Aciklama...</p>
-            </div>
-            <div class="clear"></div>
         }
-    </div>
+        i++;
+    }
 </div>

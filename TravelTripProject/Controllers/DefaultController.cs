@@ -11,6 +11,7 @@ namespace TravelTripProject.Controllers
     {
         // GET: Default
         Context c = new Context();
+        BlogYorum by = new BlogYorum();
         public ActionResult Index()
         {
             return View(c.Blogs.OrderByDescending(x=>x.ID).Take(5).ToList());
@@ -33,7 +34,8 @@ namespace TravelTripProject.Controllers
 
         public PartialViewResult Partial3()
         {
-            return PartialView(c.Blogs.Take(3).ToList());
+            by.Deger4 = c.Yorumlars.OrderByDescending(x => x.ID).Take(6).ToList();
+            return PartialView(by);
         }
     }
 }

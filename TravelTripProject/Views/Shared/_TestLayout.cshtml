@@ -9,27 +9,21 @@
     <title>HavePet</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="~/web/css/style-liberty.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-          rel="stylesheet">
     <script src="~/web/js/jquery.min.js"></script>
     <script src="~/web/js/responsiveslides.min.js"></script>
-    <script src="~/web/js/bootstrap.min.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Template JavaScript -->
-    <script src="~/web2/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="~/web/css/style-liberty.css">
+    <script src="~/web/js/bootstrap.min.js"></script>
     <script src="~/web2/js/theme-change.js"></script>
-    <!-- stats number counter-->
-    <script src="~/web2/js/jquery.waypoints.min.js"></script>
-    <script src="~/web2/js/jquery.countup.js"></script>
-
     <script>
         $('.counter').countUp();
     </script>
+
     <script>
         // You can also use "$(window).load(function() {"
         $(function () {
@@ -66,20 +60,38 @@
                 }
             });
         });
-
     </script>
 </head>
 <body>
     <div class="header">
         <div class="wrap">
-            <div class="logo"><a href="index.html"><img src="~/web/images/logo.png" alt="" /></a></div>
+            <div class="logo"><a href="/Default/Index"></a><img src="~/web/images/logo.png" alt="" /></div>
             <div class="con-right">
-                <div class="grid1-l-img">
-                    <img src="~/web/images/contact.png" alt="">
-                </div>
-                <div class="grid1-l-desc">
-                    <p>Contact : +91 00000-55555</p>
-                </div>
+                @*<div class="grid1-l-img">
+            <img src="~/web/images/contact.png" alt="">
+        </div>*@
+                @*<div class="grid1-l-desc">
+            <p>İletişim : +905392730139</p>
+        </div>*@
+
+
+
+
+
+
+                <h6><a href="#" class="text-white">İlan Ekle</a></h6>
+
+
+
+
+
+                <h6><a href="/GirisYap/Login" class="text-white">Giriş</a></h6>
+
+
+
+
+
+
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
@@ -91,15 +103,15 @@
                 <li><a href="/Default/Index/">Ana Sayfa</a></li>
                 <li><a class="hsubs" href="/About/Index">Hakkımızda</a></li>
                 <li>
-                    <a class="hsubs" href="destinations.html">İlanlar</a>
+                    <a class="hsubs" href="/Pet/Index/">İlanlar</a>
                     @*<ul class="subs">
-                        <li><a href="#">Hotels</a></li>
-                        <li><a href="#">Restaurants</a></li>
-                        <li><a href="#">Beach Resorts</a></li>
+                        <li><a href="#">Köpekler</a></li>
+                        <li><a href="#">Kediler</a></li>
+                        <li><a href="#">Balıklar</a></li>
                     </ul>*@
                 </li>
                 <li><a class="hsubs" href="/Blog/Index">Bloglar</a></li>
-                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="/Iletisim/Index">İletişim</a></li>
             </ul>
         </div>
     </div>
